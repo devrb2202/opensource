@@ -1,13 +1,18 @@
 <template>
     <v-container>
         <v-row class="d-flex justify-center align-center --login-height">
-            <v-col cols="10" sm="6">
+            <v-col cols="10" sm="4">
                 <v-card class="elevation-6 pa-12 rounded-lg">
+                    <div class="text-center">
+                        <v-icon size="70">mdi-lightning-bolt</v-icon>
+                    </div>
                     <v-card-title>Login</v-card-title>
                     <v-card-text>
                         <v-text-field label="Username"
-                          variant="underlined"
+                          variant="outlined"
                           prepend-inner-icon="mdi-account"
+                          color="orange-lighten-1"
+                          placeholder="Enter your username"
 
                         >
                         </v-text-field>
@@ -26,11 +31,13 @@
                         </div> -->
 
                         <v-text-field label="Password" 
-                         variant="underlined"
+                         variant="outlined"
                          prepend-inner-icon="mdi-lock"
                         :append-inner-icon="visible ? 'mdi-eye-off' : 'mdi-eye'"
                         :type="visible ? 'text' : 'password'"
                          @click:append-inner="visible = !visible"
+                         color="orange-lighten-1"
+                         placeholder="Enter your password"
                         >
                         </v-text-field>
 

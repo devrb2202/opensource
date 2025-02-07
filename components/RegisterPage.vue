@@ -1,30 +1,39 @@
 <template>
     <v-container>
         <v-row class="d-flex justify-center align-center --login-height">
-            <v-col cols="12" sm="6">
+            <v-col cols="12" sm="4">
                 <v-card class="elevation-6 pa-12 rounded-lg">
                     <v-card-title>Account Registration</v-card-title>
                     <v-card-text>
                         <v-text-field label="Email"
-                          variant="underlined"
+                          variant="outlined"
                           prepend-inner-icon="mdi-email"
+                          color="orange-lighten-1"
+                          placeholder="Your Email"
                         >
                         </v-text-field>
                         <v-text-field label="Username"
-                          variant="underlined"
+                          variant="outlined"
                           prepend-inner-icon="mdi-account"
+                          color="orange-lighten-1"
+                          placeholder="Your Username"
                         >
                         </v-text-field>
                         <v-text-field label="Password" 
                          type="password"
-                         variant="underlined"
+                         variant="outlined"
                          prepend-inner-icon="mdi-lock"
+                         color="orange-lighten-1"
+                         placeholder="Your Password"
+
                         >
                         </v-text-field>
                         <v-text-field label="Confirm Password" 
                          type="password"
-                         variant="underlined"
+                         variant="outlined"
                          prepend-inner-icon="mdi-lock"
+                         color="orange-lighten-1"
+                         placeholder="Your Confirm Password"
                         >
                         </v-text-field>
                         <v-btn @click="login" color="orange-lighten-1" block>Register</v-btn>

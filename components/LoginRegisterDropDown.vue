@@ -7,22 +7,22 @@
             <v-btn
             v-bind="props"
             append-icon="mdi-menu-down"
+            
             >
                 Account
             </v-btn>
         </template>
 
-        <v-list>
-            <!-- <NuxtLink to="/login"> -->
+            <v-list>
                 <v-list-item
-                v-for="(item, index) in items"
-                :key="index"
-                :to="item.to"
-                >
-                <v-list-item-title>{{ item.title }}</v-list-item-title>
+                    v-for="(item, index) in items"
+                    :key="index"
+                    :to="item.to"
+                    >
+                    <v-list-item-title>{{ item.title }}</v-list-item-title>
                 </v-list-item>
-            <!-- </NuxtLink> -->
-        </v-list>
+                
+            </v-list>
         </v-menu>
     </div>
 </template>
