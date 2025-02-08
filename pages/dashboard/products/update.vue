@@ -10,5 +10,11 @@
 definePageMeta({
     layout: 'dashboard'
 })
+
+// const { data: products } = await useFetch('https://fakestoreapi.com/products/')
+
+
+
+
 </script>
 
