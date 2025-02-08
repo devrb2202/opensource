@@ -18,34 +18,41 @@
             <v-list-item
             v-bind="props"
             title="Admin"
-            ></v-list-item>
+            
+           
+            >
+            <!-- to="/dashboard/users" -->
+        </v-list-item>
         </template>
 
         <v-list-item
-            v-for="([title, icon], i) in admins"
+            v-for="([title, icon, to], i) in admins"
             :key="i"
             :prepend-icon="icon"
             :title="title"
             :value="title"
+            :to="to"
         ></v-list-item>
         </v-list-group>
 
-        <v-list-group value="Actions">
+        <!-- STAND BY -->
+        <!-- <v-list-group value="Actions">
         <template v-slot:activator="{ props }">
             <v-list-item
             v-bind="props"
             title="Actions"
             ></v-list-item>
         </template>
-
+ 
         <v-list-item
             v-for="([title, icon], i) in cruds"
             :key="i"
             :prepend-icon="icon"
             :title="title"
             :value="title"
-        ></v-list-item>
-        </v-list-group>
+        ></v-list-item> 
+        </v-list-group> -->
+
     </v-list-group>
 
     <!-- second group -->
@@ -65,17 +72,20 @@
                 <v-list-item
                 v-bind="props"
                 title="Options"
+            
                 >
+                <!--     to="/dashboard/products" -->
                 </v-list-item>
                 
             </template>
 
             <v-list-item
-            v-for="([title, icon], i) in items"
+            v-for="([title, icon, to], i) in items"
             :key="i"
             :prepend-icon="icon"
             :title="title"
             :value="title"
+            :to="to"
             >
             
             </v-list-item>
@@ -100,17 +110,20 @@
                 <v-list-item
                 v-bind="props"
                 title="Files"
+                
                 >
+                <!-- to="/dashboard/reports" -->
                 </v-list-item>
                 
             </template>
 
             <v-list-item
-            v-for="([title, icon], i) in files"
+            v-for="([title, icon, to], i) in files"
             :key="i"
             :prepend-icon="icon"
             :title="title"
             :value="title"
+            :to="to"
             >
             
             </v-list-item>
@@ -127,28 +140,30 @@ export default {
     open: ['Users', 'Products', 'Reports'],
     // 1st group
     admins: [
-        ['Management', 'mdi-account-multiple-outline'],
-        ['Settings', 'mdi-cog-outline'],
+        ['Management', 'mdi-account-multiple-outline','/dashboard/users/managements'],
+        ['Settings', 'mdi-cog-outline','/dashboard/users/settings'],
+   
     ],
-    cruds: [
-        ['Create', 'mdi-plus-outline'],
-        ['Read', 'mdi-file-outline'],
-        ['Update', 'mdi-update'],
-        ['Delete', 'mdi-delete'],
-    ],
-    // 2nd group
+    // cruds: [
+    //     ['Create', 'mdi-plus-outline',],
+    //     ['Read', 'mdi-file-outline'],
+    //     ['Update', 'mdi-update'],
+    //     ['Delete', 'mdi-delete'],
+    // ],
+
+    // 2nd group products
     items: [
-        ['Add Product', 'mdi-plus-outline'],
-        ['View Products', 'mdi-file-outline'],
-        ['Update Product', 'mdi-update'],
-        ['Delete Product', 'mdi-delete'],
+        ['Add Product', 'mdi-plus-outline','/dashboard/products/add'],
+        ['View Products', 'mdi-file-outline', '/dashboard/products/view'],
+        ['Update Product', 'mdi-update','/dashboard/products/update'],
+        ['Delete Product', 'mdi-delete','/dashboard/products/delete'],
     ],
     // 3rd group
     files: [
-        ['Add File', 'mdi-plus-outline'],
-        ['View Files', 'mdi-file-outline'],
-        ['Update File', 'mdi-update'],
-        ['Delete File', 'mdi-delete'],
+        ['Add File', 'mdi-plus-outline', '/dashboard/reports/add'],
+        ['View Files', 'mdi-file-outline','/dashboard/reports/view'],
+        ['Update File', 'mdi-update','/dashboard/reports/update'],
+        ['Delete File', 'mdi-delete','/dashboard/reports/delete'],
     ],
     }),
 }
