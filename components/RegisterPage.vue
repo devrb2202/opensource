@@ -1,7 +1,7 @@
 <template>
     <v-container>
-        <v-row class="d-flex justify-center align-center --login-height">
-            <v-col cols="12" sm="4">
+        <v-row class="d-flex justify-center align-center --login-height" wrap no-gutters xs="12">
+            <v-col cols="12" xl="5" sm="10" md="6" lg="6" xll="1" xs="12">
                 <v-card class="elevation-6 pa-12 rounded-lg">
                     <v-card-title>Account Registration</v-card-title>
                     <v-card-text>

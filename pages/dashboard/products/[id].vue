@@ -1,6 +1,7 @@
 <template>
-    Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat, quasi?
-    {{ id }}
+    <h1>Details Page</h1>
+    <h1>Item ID : {{ id }}</h1>
+    <v-btn color="primary" to="/dashboard/products/view">Back to Products</v-btn>
 </template>
 
 <script setup>
